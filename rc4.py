@@ -44,7 +44,12 @@ def PRGA():
 #Le quita los caracteres '0x' a cada número hexadecimal y las letras las pone en mayúscula
 def hexa(lista):
 	for i in range (len(lista)):
-		lista[i]= lista[i][2:].upper()
+		#Si el valor es menor que 9 contatenamos un '0'
+		#para tener 2 bytes por caracter
+		if int(lista[i],16)<=9:
+			lista[i]='0'+lista[i][2:].upper()
+		else:
+			lista[i]=lista[i][2:].upper()
 	return lista
 
 KSA()
@@ -58,6 +63,3 @@ for letra in plainT:
 #Llama a la función 'hexa' y une cada valor de la lista en una cadena
 cipherText="".join(hexa(XOR))
 print(cipherText)
-
-
-
