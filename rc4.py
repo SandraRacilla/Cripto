@@ -1,4 +1,6 @@
-
+#Sandra García Racilla
+#Criptografía
+#RC4
 S=[]
 T=[]
 aux=[]
