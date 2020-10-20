@@ -44,9 +44,9 @@ def PRGA():
 #Le quita los caracteres '0x' a cada número hexadecimal y las letras las pone en mayúscula
 def hexa(lista):
 	for i in range (len(lista)):
-		#Si el valor es menor que 9 contatenamos un '0'
+		#Si el valor es menor que 16 contatenamos un '0'
 		#para tener 2 bytes por caracter
-		if int(lista[i],16)<=9:
+		if int(lista[i],16)<=16:
 			lista[i]='0'+lista[i][2:].upper()
 		else:
 			lista[i]=lista[i][2:].upper()
